@@ -1,0 +1,12 @@
+{
+  "generator-jhipster-agilekip:1.0.3-SNAPSHOT": {
+    "promptValues": {
+      "packageName": "com.cascon"
+    }
+  },
+  "generator-jhipster:7.0.1": {
+    "promptValues": {
+      "nativeLanguage": "en"
+    }
+  }
+}

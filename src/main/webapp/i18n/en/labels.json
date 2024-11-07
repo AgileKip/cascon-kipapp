@@ -1,0 +1,31 @@
+{
+  "entity": {
+    "action": {
+      "confirm": "OK"
+    }
+  },
+  "label": {
+    "assignee": "Assignee",
+    "businessKey": "Business Key",
+    "camundaDeploymentId": "Deployment Id",
+    "candidateGroups": "Candidate Groups",
+    "createDate": "Create Time",
+    "endDate": "End Date",
+    "endTime": "End Time",
+    "executionId": "Execution Id",
+    "name": "Name",
+    "id": "Id",
+    "owner": "Owner",
+    "priority": "Priority",
+    "processDefinition": "Process",
+    "processInstance": "Instance",
+    "status": "Status",
+    "startDate": "Start Date",
+    "startTime": "Start Time",
+    "suspended": "Suspended",
+    "taskDefinitionKey": "Task Definition Key",
+    "taskId": "Task Id",
+    "tenant": "Tenant",
+    "username": "Username"
+  }
+}

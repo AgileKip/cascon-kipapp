@@ -1,0 +1,59 @@
+{
+  "generator-jhipster": {
+    "skipJhipsterDependencies": true,
+    "blueprints": [
+      {
+        "name": "generator-jhipster-agilekip",
+        "version": "1.0.3-SNAPSHOT"
+      }
+    ],
+    "otherModules": [
+      {
+        "name": "generator-jhipster-agilekip",
+        "version": "1.0.3-SNAPSHOT"
+      }
+    ],
+    "applicationType": "monolith",
+    "baseName": "casconKipapp",
+    "jhipsterVersion": "7.0.1",
+    "skipClient": false,
+    "skipServer": false,
+    "skipUserManagement": false,
+    "skipCheckLengthOfIdentifier": false,
+    "skipFakeData": false,
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "testFrameworks": [],
+    "pages": [],
+    "creationTimestamp": 1730928236373,
+    "akipEdition": "Enterprise",
+    "akipArchitecture": "Monolithic",
+    "serviceDiscoveryType": false,
+    "reactive": false,
+    "authenticationType": "jwt",
+    "packageName": "com.cascon",
+    "serverPort": "8080",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "buildTool": "maven",
+    "serverSideOptions": [],
+    "websocket": false,
+    "searchEngine": false,
+    "messageBroker": false,
+    "enableSwaggerCodegen": false,
+    "clientFramework": "vue",
+    "withAdminUi": true,
+    "clientTheme": "cyborg",
+    "clientThemeVariant": "dark",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "packageFolder": "com/cascon",
+    "jwtSecretKey": "ZmYwMWJhMDgwNzM3NjU3ZjgxNmNhYzZiNzZjMzUzZGE5OWI0NTNkY2ZkY2M5ZjBmYWQ4Yjc0OWQ5MjgwODE5YTE1ZjU2ZGE2ZDNkMDFlODg4Mzk3NzkwNjUwODdiMjc2MDI5Y2EwMzMwOGI3MzQ1OGEzZWEwZjEyNzQ5MTZjYjg=",
+    "clientPackageManager": "npm",
+    "languages": ["en"]
+  }
+}
