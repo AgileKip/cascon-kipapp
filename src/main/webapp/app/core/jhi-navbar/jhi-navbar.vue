@@ -1,8 +1,11 @@
 <template>
-  <b-navbar data-cy="navbar" toggleable="md" type="dark" class="bg-dark">
-    <b-navbar-brand class="logo" b-link to="/">
-      <span class="logo-img"></span>
-      <span v-text="$t('global.title')" class="navbar-title">casconKipapp</span> <span class="navbar-version">{{ version }}</span>
+  <b-navbar data-cy="navbar" toggleable="md" type="dark" class="bg-primary">
+    <b-navbar-brand tag="h1" class="logo" b-link to="/">
+      <h3>
+        <span class="logo-img"></span>
+        <span v-text="$t('global.title')" class="navbar-title">casconKipapp</span>
+        <span class="navbar-version">{{ version }}</span>
+      </h3>
     </b-navbar-brand>
     <b-navbar-toggle
       right
@@ -200,7 +203,7 @@
   height: 70px;
   display: inline-block;
   vertical-align: middle;
-  width: 200px;
+  width: 100px;
 }
 
 .logo-img {
