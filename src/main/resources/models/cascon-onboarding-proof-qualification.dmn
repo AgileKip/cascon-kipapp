@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1q0mb49" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.6.0">
+  <decision id="ProofOfQualificationDMN" name="Proof of Qualification DMN">
+    <decisionTable id="DecisionTable_1d7hafa" hitPolicy="FIRST">
+      <input id="InputClause_150wogb" biodi:width="412">
+        <inputExpression id="LiteralExpression_0q20kxg" typeRef="string">
+          <text>processInstance.data.workType</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1x0v802" biodi:width="327">
+        <inputExpression id="LiteralExpression_0y4nbh1" typeRef="string">
+          <text>processInstance.data.department</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="result" typeRef="boolean" biodi:width="192" />
+      <rule id="DecisionRule_0wfzjvn">
+        <inputEntry id="UnaryTests_0ft9cdf">
+          <text>"FullTime"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r4d7v9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1odifzi">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0f22f6k">
+        <inputEntry id="UnaryTests_1g4ln3t">
+          <text>"PartTime"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i48txi">
+          <text>"Engineering"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1w33cnn">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1sq2jip">
+        <inputEntry id="UnaryTests_1u0zqis">
+          <text>"PartTime"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cgd7it">
+          <text>"IT"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1yfp7l3">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t1f88h">
+        <inputEntry id="UnaryTests_0u64ozn">
+          <text>"PartTime"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16u9kxf">
+          <text>"Accounting"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04869l4">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rrwz5j">
+        <inputEntry id="UnaryTests_1r62m6m">
+          <text>"PartTime"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o0z87n">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vlwd42">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="ProofOfQualificationDMN">
+        <dc:Bounds height="80" width="180" x="150" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

@@ -1,0 +1,3 @@
+def employee = hqlApi.findObject("from User where login = '${processInstance.data.employee}'")
+
+"Welcome aboard ${employee.firstName} ${employee.lastName}"

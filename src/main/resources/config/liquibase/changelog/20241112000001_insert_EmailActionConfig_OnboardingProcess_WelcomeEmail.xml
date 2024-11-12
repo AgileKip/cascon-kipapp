@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="20241112000001-01" author="utelemaco">
+        <insert tableName="AKIP_EMAIL_CONNECTOR_CONFIG">
+            <column name="id" valueSequenceNext="sequence_generator" />
+            <column name="name" value="OnboardingProcess.WelcomeEmail" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="20241112000001-02" author="utelemaco">
+        <update tableName="AKIP_EMAIL_CONNECTOR_CONFIG">
+            <column name="content_expression" valueClobFile="../data/emails/onboarding-process/OnboardingProcess.WelcomeEmail.content.txt"/>
+            <column name="mailbox_expression" valueClobFile="../data/emails/onboarding-process/OnboardingProcess.WelcomeEmail.mailbox.txt"/>
+            <column name="subject_expression" valueClobFile="../data/emails/onboarding-process/OnboardingProcess.WelcomeEmail.subject.txt"/>
+            <where>name = 'OnboardingProcess.WelcomeEmail'</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>
+
+
+

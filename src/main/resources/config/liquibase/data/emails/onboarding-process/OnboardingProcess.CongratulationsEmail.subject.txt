@@ -1,0 +1,3 @@
+def employee = hqlApi.findObject("from User where login = '${processInstance.data.employee}'")
+
+"Congratulations ${employee.firstName} ${employee.lastName}. You have finished your onboarding process"

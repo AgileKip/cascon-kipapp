@@ -1,0 +1,28 @@
+def employee = hqlApi.findObject("from User where login = '${processInstance.data.employee}'")
+
+def supervisor = hqlApi.findObject("from User where login = '${processInstance.data.supervisor}'")
+
+"""
+<p>
+Dear ${employee.firstName} ${employee.lastName},
+</p>
+
+<p>
+  Congratulations! You have just successfully finished your onboarding process.
+</p>
+<p>
+  We are excited to have you on board and look forward to working together to achieve great things!
+</p>
+<p>
+  Welcome aboard!
+</p>
+
+<p>
+<div style="line-height: 16px;margin-top: 45px;">
+<small>
+  Cascon 2024<br/>
+  HR<br/>
+</small>
+</div>
+</p>
+"""

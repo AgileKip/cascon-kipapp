@@ -1,0 +1,10 @@
+def emails = []
+
+def employee = hqlApi.findObject("from User where login = '${processInstance.data.employee}'")
+emails << employee.email
+
+def supervisor = hqlApi.findObject("from User where login = '${processInstance.data.supervisor}'")
+emails << supervisor.email
+
+
+return emails
