@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--property to auto-increment -->
+    <property name="autoIncrement" value="true"/>
+
+    <changeSet id="20241112000003-1" author="utelemaco">
+        <insert tableName="process_timeline_definition">
+            <column name="id" valueNumeric="5"/>
+            <column name="name" value="Onboarding Process - Full Time"/>
+            <column name="bpmn_process_definition_id" value="OnboardingProcess"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="1"/>
+            <column name="name" value="Onboading Process Started"/>
+            <column name="expression" value="processInstanceStarted"/>
+            <column name="process_timeline_definition_id" valueNumeric="5"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="2"/>
+            <column name="name" value="Welcome Employee"/>
+            <column name="expression" value="TaskWelcomeEmployee"/>
+            <column name="process_timeline_definition_id" valueNumeric="5"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="3"/>
+            <column name="name" value="Provide Documents"/>
+            <column name="expression" value="TaskProvideProofOfQualifications and TAskFillTaxForms and TAskFillEmploymentContract and TAskFillCompanyPolicies"/>
+            <column name="process_timeline_definition_id" valueNumeric="5"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="4"/>
+            <column name="name" value="Check Documentation"/>
+            <column name="expression" value="TaskCheckDocumentation"/>
+            <column name="process_timeline_definition_id" valueNumeric="5"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="5"/>
+            <column name="name" value="Internal Courses"/>
+            <column name="expression" value="TaskInternalCourseMeetTheTeam and  TaskInternalCourseCompanyValuesAndCulture and TaskInternalCourseCodeConduct and TaskInternalCourseCyberSecurity and  TaskInternalCourseWellbeingWorkplace"/>
+            <column name="process_timeline_definition_id" valueNumeric="5"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="6"/>
+            <column name="name" value="Pre-Employment Physical Exam"/>
+            <column name="expression" value="TaskPreEmploymentPhysical"/>
+            <column name="process_timeline_definition_id" valueNumeric="5"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="7"/>
+            <column name="name" value="Review Process"/>
+            <column name="expression" value="TaskReviewOnboardingProcess"/>
+            <column name="process_timeline_definition_id" valueNumeric="5"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="8"/>
+            <column name="name" value="Welcome Kit"/>
+            <column name="expression" value="TaskSendWelcomeKit"/>
+            <column name="process_timeline_definition_id" valueNumeric="5"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="9"/>
+            <column name="name" value="Onboarding Process Completed"/>
+            <column name="expression" value="processInstanceCompleted"/>
+            <column name="process_timeline_definition_id" valueNumeric="5"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="20240514000003-2" author="utelemaco">
+        <insert tableName="process_timeline_definition">
+            <column name="id" valueNumeric="6"/>
+            <column name="name" value="Onboarding Process - Part Time"/>
+            <column name="condition_expression" value="processInstance.data.workType == 'PartTime'"/>
+            <column name="bpmn_process_definition_id" value="OnboardingProcess"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="1"/>
+            <column name="name" value="Onboarding Process Started"/>
+            <column name="expression" value="processInstanceStarted"/>
+            <column name="process_timeline_definition_id" valueNumeric="6"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="2"/>
+            <column name="name" value="Welcome Employee"/>
+            <column name="expression" value="TaskWelcomeEmployee"/>
+            <column name="process_timeline_definition_id" valueNumeric="6"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="3"/>
+            <column name="name" value="Provide Documents"/>
+            <column name="expression" value="TAskFillTaxForms and TAskFillEmploymentContract and TAskFillCompanyPolicies"/>
+            <column name="process_timeline_definition_id" valueNumeric="6"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="4"/>
+            <column name="name" value="Check Documentation"/>
+            <column name="expression" value="TaskCheckDocumentation"/>
+            <column name="process_timeline_definition_id" valueNumeric="6"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="5"/>
+            <column name="name" value="Internal Courses"/>
+            <column name="expression" value="TaskInternalCourseMeetTheTeam and  TaskInternalCourseCompanyValuesAndCulture and TaskInternalCourseCodeConduct and TaskInternalCourseCyberSecurity and  TaskInternalCourseWellbeingWorkplace"/>
+            <column name="process_timeline_definition_id" valueNumeric="6"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="6"/>
+            <column name="name" value="Pre-Employment Physical Exam"/>
+            <column name="expression" value="TaskPreEmploymentPhysical"/>
+            <column name="process_timeline_definition_id" valueNumeric="6"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="7"/>
+            <column name="name" value="Review Process"/>
+            <column name="expression" value="TaskReviewOnboardingProcess"/>
+            <column name="process_timeline_definition_id" valueNumeric="6"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="8"/>
+            <column name="name" value="Welcome Kit"/>
+            <column name="expression" value="TaskSendWelcomeKit"/>
+            <column name="process_timeline_definition_id" valueNumeric="6"/>
+        </insert>
+        <insert tableName="process_timeline_item_def">
+            <column name="id" valueSequenceNext="sequence_generator"/>
+            <column name="step" valueNumeric="9"/>
+            <column name="name" value="Onboarding Process Completed"/>
+            <column name="expression" value="processInstanceCompleted"/>
+            <column name="process_timeline_definition_id" valueNumeric="6"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

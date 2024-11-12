@@ -18,6 +18,7 @@
     <include file="config/liquibase/changelog/20241112000000_insert_OnboardingProcess_Users.xml" relativeToChangelogFile="false" />
     <include file="config/liquibase/changelog/20241112000001_insert_EmailActionConfig_OnboardingProcess_WelcomeEmail.xml" relativeToChangelogFile="false" />
     <include file="config/liquibase/changelog/20241112000002_insert_EmailActionConfig_OnboardingProcess_CongratulationsEmail.xml" relativeToChangelogFile="false" />
+    <include file="config/liquibase/changelog/20241112000003_load_timelines_OnboardingProcess.xml" relativeToChangelogFile="false" />
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
